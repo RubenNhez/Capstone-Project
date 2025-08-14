@@ -169,7 +169,7 @@ kanban
         (Epic 2 Story 4: As a Data Analyst/Scientist, I want to be able to use visualizations tools such as Pandas and Streamlit to communicate the insights I discover from the data received.)
         (Epic 3 Story 5: As the customer, I want to received a end-to-end data pipeline and see some insights/visualizations from the data provided)
     (User Story 1:)
-        Task 1: Chose a dataset to work on
+        Task 1: Choose a dataset to work on
         Task 1.1 : Extract the data from the CSV file
         Task 1.2: Store the data into a DataFrame
         Task 1.3: Check if the extraction was complete e.g. Print Statements
