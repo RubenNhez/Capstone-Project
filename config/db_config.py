@@ -1,15 +1,13 @@
 import os
 import logging
-from src.utils.logging_utils import setup_logger
 from typing import Dict
 
 
 class DatabaseConfigError(Exception):
     pass
 
-
-# Configure the logger
-logger = setup_logger(__name__, "database.log", level=logging.DEBUG)
+# Define the structure of the database configuration
+# Retrieve environment variables
 
 
 def load_db_config() -> Dict[str, Dict[str, str]]:
@@ -41,9 +39,11 @@ def load_db_config() -> Dict[str, Dict[str, str]]:
             "port": os.getenv("TARGET_DB_PORT", "5432"),
         },
     }
-
+   
+    # Validate the database configuration
     validate_db_config(config)
 
+    # Return the validated configuration as dictionary
     return config
 
 
@@ -51,10 +51,7 @@ def validate_db_config(config):
     for db_key, db_config in config.items():
         for key, value in db_config.items():
             if value == "error":
-                logger.setLevel(logging.ERROR)
-                logger.error(
-                    f"Configuration error: {db_key} {key} is set to 'error'"
-                )
-                raise DatabaseConfigError(
-                    f"Configuration error: {db_key} {key} is set to 'error'"
-                )
+                raise ValueError(f"Missing variable for {db_key} - {key}")
+            if key == "password" and not value:
+                raise ValueError(f"Empty Password for {db_key} - {key}")
+               

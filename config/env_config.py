@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv
 
+
+# Declare acceptable environment variables
 ENVS = ["dev", "test", "prod"]
 
 
@@ -28,13 +30,14 @@ def setup_env(argv):
     or is not one of the expected values.
     :raises KeyError: If the ENV variable is not set
     """
+    # Load environment variables from a .env file
     if len(argv) != 2 or argv[1] not in ENVS:
         raise ValueError(
             "Please provide an environment: " f"{ENVS}. E.g. run_etl dev"
         )
 
     env = argv[1]
-
+    # Clear previous environment details
     cleanup_previous_env()
     os.environ["ENV"] = env
 
