@@ -1,3 +1,30 @@
+## Set up a local environment
+```bash
+#Make an environment
+python3 -m venv .venv
+
+# Activate the environment based on your device
+
+# For Windows
+source .venv/Scripts/activate
+
+# For Mac
+source .venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+```
+---
+## Data for this Project
+
+- Kaggle dataset by Rodolfo Figueroa:
+  - https://www.kaggle.com/datasets/rodolfofigueroa/spotify-12m-songs?resource=download
+- Spotify API:
+  - https://developer.spotify.com/documentation/web-api/tutorials/getting-started
+
+
+
+
 
 ---
 ---
