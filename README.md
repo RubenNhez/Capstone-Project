@@ -197,12 +197,13 @@ kanban
         (Epic 3 Story 5: As the customer, I want to received a end-to-end data pipeline and see some insights/visualizations from the data provided)
     (User Story 1:)
         Task 1: Choose a dataset to work on
-        Task 1.1 : Extract the data from the CSV file
-        Task 1.2: Store the data into a DataFrame
-        Task 1.3: Check if the extraction was complete e.g. Print Statements
+        Task 1.1: Ask ChatGPT to mess with the data e.g. add null values duplicated or different date formats
+        Task 1.2 : Extract the data from the CSV file
+        Task 1.3: Store the data into a DataFrame
+        Task 1.4: Check if the extraction was complete e.g. Print Statements
     (User Story 2:)
         Task 2: Get the extracted data
-        Task 2.1: Check for null values and dell with them
+        Task 2.1: Check for null values and deal with them
         Task 2.2: Check for duplicated and deal with them
         Task 2.3: Remove any unnecessary columns if needed
         Task 2.4: Save the cleaned data
