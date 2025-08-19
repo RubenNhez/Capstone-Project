@@ -161,5 +161,3 @@ config/config.yaml
 # System Files
 .DS_Store
 notebooks/gitignore/*
-
-tracks_features.csv
