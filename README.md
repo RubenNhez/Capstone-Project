@@ -88,10 +88,10 @@ I want start the extraction phase of the pipeline by extracting the dataset from
 
 #### USER STORY 1 ACCEPTANCE CRITERIA
 
-- [ ] Have a chosen CSV file data to perform extraction
-- [ ] Extract the data from the CSV file
-- [ ] Store it into a DataFrame so it's ready for further processing
-- [ ] Check if the extraction was completed e.g. Print statements
+- [X] Have a chosen CSV file data to perform extraction
+- [X] Extract the data from the CSV file
+- [X] Store it into a DataFrame so it's ready for further processing
+- [X] Check if the extraction was completed e.g. Print statements
 
 ---
 
@@ -104,12 +104,12 @@ I want to take the extracted data and perform transformation on it thus making s
 
 #### USER STORY 2 ACCEPTANCE CRITERIA
 
-- [ ] Get the extracted data
-- [ ] Check for check for null values and deal with them
-- [ ] Check for duplicated and deal with them
-- [ ] Remove any unnecessary columns if needed
-- [ ] Save the cleaned data
-- [ ] Check if the data was cleaned e.g. Print Statements
+- [X] Get the extracted data
+- [X] Check for check for null values and deal with them
+- [X] Check for duplicated and deal with them
+- [X] Remove any unnecessary columns if needed
+- [X] Save the cleaned data
+- [X] Check if the data was cleaned e.g. Print Statements
 
 ---
 
@@ -122,11 +122,11 @@ I want to be able to load the cleaned data from the transformation phase into th
 
 ##### USER STORY 3 ACCEPTANCE CRITERIA
 
-- [ ] Get the cleaned data
-- [ ] Establish a connection to the pagila database
-- [ ] Check if the connection was successful
-- [ ] Make a table in the pagila database to be able to insert data into it
-- [ ] Insert at least 10,000 records into the pagila database table
+- [X] Get the cleaned data
+- [X] Establish a connection to the pagila database
+- [X] Check if the connection was successful
+- [X] Make a table in the pagila database to be able to insert data into it
+- [X] Insert at least 10,000 records into the pagila database table
 
 ---
 
@@ -145,7 +145,7 @@ I want to be able to use visualizations tools such as Pandas and Streamlit to co
 ```
 
 #### USER STORY 4 ACCEPTANCE CRITERIA
-- [ ] Load the data
+- [ ] Load the data from the API
 - [ ] Use visualization tools display some insights/visualizations
 - [ ] Deploy the visualizations/insights in Streamlit 
 
