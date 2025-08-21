@@ -22,9 +22,65 @@ pip install -r requirements.txt
 - Spotify API:
   - https://developer.spotify.com/documentation/web-api/tutorials/getting-started
 
+## Required files
+```text
+You need a .env.dev file
+# Development Environment Variables
 
+# Source Database Configuration
+SOURCE_DB_NAME=<DB_NAME>
+SOURCE_DB_USER=<DB_USER>
+SOURCE_DB_PASSWORD=<DB_PASSWORD>
+SOURCE_DB_HOST=<DB_HOST>
+SOURCE_DB_PORT=<DB_PORT>
 
+# Target Database Configuration
+TARGET_DB_NAME=<DB_NAME>
+TARGET_DB_USER=<DB_USER>
+TARGET_DB_PASSWORD=<DB_PASSWORD>
+TARGET_DB_HOST=<DB_HOST>
+TARGET_DB_PORT=<DB_PORT>
 
+# Spotify API Credentials
+SPOTIFY_CLIENT_ID=<SPOTIFY_CLIENT_ID>
+SPOTIFY_CLIENT_SECRET=<SPOTIFY_CLIENT_SECRET>
+SPOTIFY_REDIRECT_URI=<SPOTIFY_REDIRECT_URI>
+```
+```text
+You need a .env.test file
+# Development Environment Variables
+
+# Source Database Configuration
+SOURCE_DB_NAME=<DB_NAME>
+SOURCE_DB_USER=<DB_USER>
+SOURCE_DB_PASSWORD=<DB_PASSWORD>
+SOURCE_DB_HOST=<DB_HOST>
+SOURCE_DB_PORT=<DB_PORT>
+
+# Target Database Configuration
+TARGET_DB_NAME=<DB_NAME>
+TARGET_DB_USER=<DB_USER>
+TARGET_DB_PASSWORD=<DB_PASSWORD>
+TARGET_DB_HOST=<DB_HOST>
+TARGET_DB_PORT=<DB_PORT>
+
+# Spotify API Credentials
+SPOTIFY_CLIENT_ID=<SPOTIFY_CLIENT_ID>
+SPOTIFY_CLIENT_SECRET=<SPOTIFY_CLIENT_SECRET>
+SPOTIFY_REDIRECT_URI=<SPOTIFY_REDIRECT_URI>
+```
+## How to get Spotify API Client ID,secret and redirect uri
+- Login into the Spotify for developers and click on dashboard: https://developer.spotify.com/
+![instruction1](images/Screenshot%202025-08-21%20141652.png)
+- Create app
+![instruction2](images/Screenshot%202025-08-21%20141721.png)
+- Fill in the app name, app description redirect uris and make sure to tick the Web API!
+```text
+Redirect URIs : http://127.0.0.1:8888/callback
+```
+![instruction3](images/Screenshot%202025-08-21%20141819.png)
+- Click on the app to view Client ID and click on "View client secret" to see the client secret
+![instruction4](images/Screenshot%202025-08-21%20141842.png)
 
 ---
 ---
@@ -145,9 +201,9 @@ I want to be able to use visualizations tools such as Pandas and Streamlit to co
 ```
 
 #### USER STORY 4 ACCEPTANCE CRITERIA
-- [ ] Load the data from the API
-- [ ] Use visualization tools display some insights/visualizations
-- [ ] Deploy the visualizations/insights in Streamlit 
+- [X] Load the data from the API
+- [X] Use visualization tools display some insights/visualizations
+- [X] Deploy the visualizations/insights in Streamlit 
 
 ---
 
@@ -223,4 +279,24 @@ kanban
         Task 5.3: Submit Any additional files if necessary e.g. .env files
     Done
 ```
+
+## Limitations/Issues
+- GibHub blocks files larger than 100MB
+  - Took me a while to figure out how to commit all my CSV to my origin/main in the end I used Git LFS to solve the issue
+- Spotify API
+- Authentication issues and not getting results (404 errors)
+  - I couldn't "Get Several Browse Categories or "GetAlbum" which restricted how much I could show a lot of my data is artists based
+  - For example I wanted to do Top 10 Global Songs for example but I couldn't retrieve the album
+- Spotify API call has a result limit of 50 per request
+  - Found a CSV on Kaggle with 1.2 million records which is essential made from the Spotify API as I needed at least 10,000 (see "Data for this Project") to perform my ETL process.
+- Spotify API data is already cleaned
+  - Had to ask ChatGPT to mess up my data so I can demonstrate ETL process.
+- Simple Artist Comparison
+  - Issues with the limitation: when I set the limit to 50 and receive the top 50 results because name isn't unique I can end up with an artists with the same name but not the artist I want but If i lower the limit I get a more accurate results
+
+## What Would I do differently in the future
+- Figure out a way to fix the authentications issues that I was getting that way I could show a variety of different insights and not just artists and user data
+- More testing - I would of liked to written my own tests as opposed to using print statements to see if everything was working as intended
+- Potentially Concatenate ids and name or name and followers to solve the issues of getting artists with the same one and selected the wrong artists
+- Include AWS services - see if I can use some AWS services in my streamlit e.g. S3 to store large amounts of data like the CSVs
 

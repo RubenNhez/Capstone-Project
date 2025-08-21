@@ -3,6 +3,7 @@ import numpy as np
 from random import choice
 from datetime import datetime
 ## Unclean my CSV clean data 
+## Asked ChatGPT to mess up my data
 
 input_path = r"tracks_features.csv"
 output_path = r"data\raw\uncleaned_tracks_features.csv"
