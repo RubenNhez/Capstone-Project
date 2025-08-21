@@ -16,16 +16,20 @@ def main():
         )
         uncleaned_data = unclean_data()
         print(uncleaned_data)
+        # Extraction Phase
         extracted_data = extract_data()
         print("Extracting")
         print(extracted_data)
+        # Transformation Phase
         transformed_data = transform_data(extracted_data)
         print(f"Data transformation is completed")
         print(transformed_data)
+        # Loading Phase
         print("Commencing Loading into the database")
         loading_data = load_into_database(transformed_data)
         print(loading_data)
     except Exception as e:
+        # Show errors
         print(f"Error has occurred: {e}")
     
     
