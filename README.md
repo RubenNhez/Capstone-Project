@@ -222,18 +222,17 @@ I want to received a end-to-end data pipeline and see some insights/visualizatio
 ```
 
 ### USER STORY 5 ACCEPTANCE CRITERIA
-- [ ] Submit the data pipeline
-- [ ] Submit A link to the Streamlit app
-- [ ] Submit Any additional files if necessary e.g. .env files
+- [X] Submit the data pipeline
+- [X] Submit A link to the Streamlit app
+- [X] Submit Any additional files if necessary e.g. .env files
 
 ---
 
 
 ## Definition Of Done
 
-- [ ] All Epics and User Stories completed
-- [ ] Code is linted and follows style guidelines
-- [ ] Everything submitted
+- [X] All Epics and User Stories completed
+- [X] Everything submitted
 
 ---
 
@@ -279,6 +278,14 @@ kanban
         Task 5.3: Submit Any additional files if necessary e.g. .env files
     Done
 ```
+## Key Insights
+I use the Spotify API and take a look into a simple artists comparison, which compares artists based on popularity, an Artist album and Singles counter, Artist and User Insights based or user input
+
+---
+
+![Context](images/Screenshot%202025-08-21%20160034.png)
+
+---
 
 ## Limitations/Issues
 - GibHub blocks files larger than 100MB
