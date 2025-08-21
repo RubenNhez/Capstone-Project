@@ -74,7 +74,7 @@ SPOTIFY_REDIRECT_URI=<SPOTIFY_REDIRECT_URI>
 ![instruction1](images/Screenshot%202025-08-21%20141652.png)
 - Create app
 ![instruction2](images/Screenshot%202025-08-21%20141721.png)
-- Fill in the app name, app description redirect uris and make sure to tick the Web API!
+- Fill in the app name, app description redirect uris and make sure to tick the Web API and add the Redirect URI!
 ```text
 Redirect URIs : http://127.0.0.1:8888/callback
 ```

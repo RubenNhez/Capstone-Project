@@ -252,18 +252,6 @@ elif page == "User Insights":
     unsafe_allow_html=True
     )
     st.title("Mini Spotify Wrapped🧑‍⚖️")
-    
-    st.subheader("If like to see your Mini Spotify Wrapped instead - Follow instructions in ReadMe on GitHub")
-    user_client_id = st.text_input("Enter Client ID (leave blank to use default)")
-    user_client_secret = st.text_input("Enter Client Secret (leave blank to use default)")
-    
-    if user_client_id and user_client_secret:
-        client_id = user_client_secret
-        client_secret = user_client_secret
-    else:
-        client_id = os.getenv("SPOTIFY_CLIENT_ID")
-        client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
-    
     # Spotify API
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
         client_id= client_id,
