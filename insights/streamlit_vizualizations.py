@@ -40,7 +40,7 @@ if page == "Home":
     st.write("- Takes an Artist Displays the Top tracks for that artists, compares tracks popularity and how many hits they had per year based on the top tracks")
     st.header("🧑‍⚖️User Insights🧑‍⚖️")
     st.write("- Display a Mini Spotify Wrapped based on either inputs by an user or mine by default")
-    st.write("- Last 20 tracks listened to, Last 10 songs/albums listened based on time range: Last 4 weeks,Last 6 months and All time")
+    st.write("- Last 20 tracks listened to, Last 10 songs/artists listened based on time range: Last 4 weeks,Last 6 months and All time")
 elif page == "Simple Artist Comparison":
     st.markdown(
     """
