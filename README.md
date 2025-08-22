@@ -283,7 +283,7 @@ I use the Spotify API and take a look into a simple artists comparison, which co
 
 ---
 
-![Context](images/Screenshot%202025-08-21%20225511.png)
+![Context](images/Screenshot%202025-08-22%20085440.png)
 
 ---
 
